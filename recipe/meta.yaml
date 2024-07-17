@@ -1,6 +1,6 @@
 {% set name = "hpp-tutorial" %}
 {% set hiddenname = "hpp_tutorial" %}
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ hiddenname }}/releases/download/v{{ version }}/{{ hiddenname }}-{{ version }}.tar.gz
-  sha256: 030c11d6a5c7469832398a18ea76aa9aa81d2c786e14167b80274e9292d6cf1e
+  sha256: da10a1cc463c486dd6748a0036275002bde26de146e556e4e84e5f4f9390ca71
 
 build:
   number: 0
@@ -24,13 +24,19 @@ requirements:
     - make
     - pkg-config
     - doxygen
+    - {{ cdt('mesa-libgl-devel') }}       # [linux]
+    - {{ cdt('mesa-dri-drivers') }}       # [linux]
+    - {{ cdt('libselinux-devel') }}       # [linux]
   host:
     - libboost-devel
     - omniorb-libs
     - hpp-core {{ version }}
+    - hpp-plot {{ version }}
     - hpp-pinocchio {{ version }}
     - hpp-corbaserver {{ version }}
     - hpp-manipulation-corba {{ version }}
+    - hpp-gepetto-viewer {{ version }}
+    - hpp-gui {{ version }}
   run:
     - omniorb-libs
 
@@ -42,8 +48,8 @@ test:
 
 about:
   home: https://github.com/humanoid-path-planner/{{ hiddenname }}
-  license: LGPL-3.0-or-later
-  license_file: COPYING
+  license: BSD-2-Clause
+  license_file: LICENSE
   summary: {{ name }} subpackage of Humanoid Path Planner suite
   description: |
     HPP (Humanoid Path Planner) is a collection of software packages implementing
