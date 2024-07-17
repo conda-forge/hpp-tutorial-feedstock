@@ -24,6 +24,9 @@ requirements:
     - make
     - pkg-config
     - doxygen
+    - {{ cdt('mesa-libgl-devel') }}       # [linux]
+    - {{ cdt('mesa-dri-drivers') }}       # [linux]
+    - {{ cdt('libselinux-devel') }}       # [linux]
   host:
     - libboost-devel
     - omniorb-libs
