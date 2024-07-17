@@ -28,6 +28,7 @@ requirements:
     - libboost-devel
     - omniorb-libs
     - hpp-core {{ version }}
+    - hpp-plot {{ version }}
     - hpp-pinocchio {{ version }}
     - hpp-corbaserver {{ version }}
     - hpp-manipulation-corba {{ version }}
