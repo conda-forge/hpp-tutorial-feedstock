@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hpp-tutorial-fe
 
 Home: https://github.com/humanoid-path-planner/hpp_tutorial
 
-Package license: LGPL-3.0-or-later
+Package license: BSD-2-Clause
 
 Summary: hpp-tutorial subpackage of Humanoid Path Planner suite
 
