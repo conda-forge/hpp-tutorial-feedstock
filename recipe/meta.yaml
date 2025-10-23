@@ -1,6 +1,6 @@
 {% set name = "hpp-tutorial" %}
 {% set hiddenname = "hpp_tutorial" %}
-{% set version = "6.0.0" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ hiddenname }}/releases/download/v{{ version }}/{{ hiddenname }}-{{ version }}.tar.gz
-  sha256: 09d0065a2612a34780487c06603fb6a3965c7429646280f08bc825ac1a61ae7b
+  sha256: 8d2b719dd70bd7b2af6297933cff507a823e54bbe4b63823321915cd69c5c62d
 
 build:
   number: 0
