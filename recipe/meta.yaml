@@ -11,7 +11,7 @@ source:
   sha256: 8d2b719dd70bd7b2af6297933cff507a823e54bbe4b63823321915cd69c5c62d
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
@@ -24,9 +24,6 @@ requirements:
     - make
     - pkg-config
     - doxygen
-    - {{ cdt('mesa-libgl-devel') }}       # [linux]
-    - {{ cdt('mesa-dri-drivers') }}       # [linux]
-    - {{ cdt('libselinux-devel') }}       # [linux]
   host:
     - libboost-devel
     - omniorb-libs
@@ -37,6 +34,7 @@ requirements:
     - hpp-manipulation-corba {{ version }}
     - hpp-gepetto-viewer {{ version }}
     - hpp-gui {{ version }}
+    - libgl-devel                         # [linux]
   run:
     - omniorb-libs
 
