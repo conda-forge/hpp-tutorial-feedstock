@@ -108,3 +108,12 @@ jobs:
         BINSTAR_TOKEN: ${{ secrets.BINSTAR_TOKEN }}
         FEEDSTOCK_TOKEN: ${{ secrets.FEEDSTOCK_TOKEN }}
         STAGING_BINSTAR_TOKEN: ${{ secrets.STAGING_BINSTAR_TOKEN }}
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Disabled build
+    runs-on: ubuntu-slim
+    if: false
+    steps:
+    - run: exit 0
